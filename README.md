@@ -1,3 +1,5 @@
+[toc]
+
 ## 使用方法
 本项目创建了一个钉钉群机器人，设置两种响应<br>
 1、每天早上9:00 发送服务器情况到钉群（包括CPU 负载 存储等数据）<br>
@@ -43,6 +45,45 @@ python3 scheduler.py
 
 ### 运行效果
 <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/df14aa596f7246308289e9ee8bfc4678~tplv-k3u1fbpfcp-zoom-1.image" width=70%/>
+
+### 创建守护进程
+经过上面我们完成了功能复现，但是会发现，一旦我们关闭程序，提醒监测服务也会停止，所以我们需要创建一个守护进程来保护我们的进程。
+
+以我自己为例，我们登录宝塔面板后，进入`/etc/systemd/system`文件夹下，新建一个`ding_bot.service`文件，并写入下面内容：
+```bash
+[Unit]
+Description=Dingding Bot service
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/python3 /root/Project/Little_project/DingdingBot/scheduler.py
+KillMode=process
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+简单解释下`Service`里设置的含义，`Type=forking`表示程序启动后，会放到后台运行；`ExecStart`服务的具体执行指令（执行scheduler.py文件即可）；`KillMode=process`表示服务停止的同时也会杀死程序主进程；`Restart=on-failure`表示系统发生意外导致程序退出时，程序自动重启。
+
+保存好文件后，我们直接终端内执行下面指令即可开启进程守护：
+```bash
+systemctl start ding_bot
+```
+
+代码修改后，需要重启守护进程，修改代码才会生效，重启指令如下：
+```bash
+systemctl restart ding_bot
+```
+
+如果不想设置这个守护进程了，执行stop指令可以停止该service（程序也会停止），指令如下：
+```bash
+systemctl stop ding_bot
+```
+
+关于守护进程system其他的相关指令和操作可以自行搜查哈，也可以留言区交流，展开讲又是一篇推文啦～
+
 
 本项目完整教程：[待补充 ｜ Python+钉钉让你更了解你的云服务器](https://python-brief.com/)
 

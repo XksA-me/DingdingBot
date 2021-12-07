@@ -24,7 +24,7 @@ git clone  https://github.com/XksA-me/DingdingBot.git
 - - requests 发送post请求，发送数据
 - - psutil 获取操作系统运行相关数据
 - - apscheduler 设置定时任务
-
+ 
 因为相关依赖较少，你可以直接在本地环境安装使用，也可以创建一个虚拟环境安装使用（Python虚拟环境推荐使用pipenv进行管理，点击我查看pipenv使用教程）。
 
 进入环境后，输入下面pip指令进行安装：

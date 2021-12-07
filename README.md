@@ -67,7 +67,7 @@ WantedBy=multi-user.target
 
 简单解释下`Service`里设置的含义，`Type=forking`表示程序启动后，会放到后台运行；`ExecStart`服务的具体执行指令（执行scheduler.py文件即可）；`KillMode=process`表示服务停止的同时也会杀死程序主进程；`Restart=on-failure`表示系统发生意外导致程序退出时，程序自动重启。
 
-保存好文件后，我们直接终端内执行下面指令即可开启进程守护：
+保存好文件后，我们直接终端内执行下面指令即可开启进程守护，运行后会进入守护进程状态，我们可以按ctrl+c退出，不会影响守护进程：
 ```bash
 systemctl start ding_bot
 ```

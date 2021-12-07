@@ -29,12 +29,11 @@ def every_seconds_30():
 和群聊机器人流程不一样～
 '''
     
-# 选择BackgroundScheduler调度器，应用程序可以后台静默运行
-sched = BlockingScheduler()
+# 选择BlockingScheduler调度器，应用程序可以后台静默运行
+sched = BlockingScheduler(timezone='Asia/Shanghai')
 
 # job_every_nine 每天早上9点运行一次  日常发送
-
-sched.add_job(every_day_nine, 'cron', hour=18, minute=27)
+sched.add_job(every_day_nine, 'cron', hour=9)
 
 # every_seconds_30 每30s执行一次  数据监控
 sched.add_job(every_seconds_30, 'interval', seconds=30)

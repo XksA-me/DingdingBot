@@ -6,6 +6,9 @@
   * [运行效果](#运行效果)
   * [创建守护进程](#创建守护进程)
 
+
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d802d52dfd147768c1cf687009afd02~tplv-k3u1fbpfcp-zoom-1.image" width=70%/>
+
 ## 使用方法
 本项目创建了一个钉钉群机器人，设置两种响应<br>
 1、每天早上9:00 发送服务器情况到钉群（包括CPU 负载 存储等数据）<br>
@@ -91,7 +94,9 @@ systemctl stop ding_bot
 关于守护进程system其他的相关指令和操作可以自行搜查哈，也可以留言区交流，展开讲又是一篇推文啦～
 
 
-本项目完整教程：[待补充 ｜ Python+钉钉让你更了解你的云服务器](https://python-brief.com/)
+本项目完整教程：[如何用Python发送告警通知到钉钉？](https://mp.weixin.qq.com/s/mGUlrx3AmMZkIxhvnqX0vQ)
+
+我的个人网站：[https://python-brief.com](https://python-brief.com)
 
 我是老表，爱猫爱技术。
 

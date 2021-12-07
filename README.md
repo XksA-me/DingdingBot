@@ -1,6 +1,6 @@
 ## 使用方法
-本项目创建了一个钉钉群机器人，设置两种响应
-1、每天早上9:00 发送服务器情况到钉群（包括CPU 负载 存储等数据）
+本项目创建了一个钉钉群机器人，设置两种响应<br>
+1、每天早上9:00 发送服务器情况到钉群（包括CPU 负载 存储等数据）<br>
 2、时时预警，每30s检测一次（监控负载 CPU使用率情况，超过阀值，钉钉消息报警）
 
 ### 下载项目文件
@@ -44,8 +44,7 @@ python3 scheduler.py
 ### 运行效果
 <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/df14aa596f7246308289e9ee8bfc4678~tplv-k3u1fbpfcp-zoom-1.image" width=70%/>
 
+本项目完整教程：[待补充 ｜ Python+钉钉让你更了解你的云服务器](https://python-brief.com/)
 
-本项目完整教程：[Python+钉钉让你更了解你的云服务器]()
-
-我是老表，和你一起学云服务器开发、Python、Go等。
+我是老表，爱猫爱技术。
 <img src="https://img-blog.csdnimg.cn/8af3813e46174c57bc7d4a4e0c77f195.png" width=70%/>

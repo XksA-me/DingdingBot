@@ -47,4 +47,5 @@ python3 scheduler.py
 本项目完整教程：[待补充 ｜ Python+钉钉让你更了解你的云服务器](https://python-brief.com/)
 
 我是老表，爱猫爱技术。
+
 <img src="https://img-blog.csdnimg.cn/8af3813e46174c57bc7d4a4e0c77f195.png" width=70%/>
